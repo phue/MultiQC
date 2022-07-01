@@ -336,7 +336,7 @@ class MultiqcModule(BaseMultiqcModule):
         """
 
         if self.info is None or self.info == "":
-            self.info = mod["config"].get("parent_description")
+            self.info = mod["config"].get("parent_description", "")
         if self.extra is None or self.info == "":
             self.extra = mod["config"].get("extra", None)
         # This needs overwriting again as it has already run on init
